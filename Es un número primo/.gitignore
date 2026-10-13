@@ -1,0 +1,43 @@
+#MacOSX
+.DS_Store
+#Editor
+.vscode
+#Archivos DLL compilados/optimizados/compilados por bytes
+__pycache__/
+*.py[bacalao]
+#extensiones de C
+*.entonces
+#Distribución / embalaje
+.Pitón
+venv/
+entorno/
+construir/
+huevos en desarrollo/
+distrito/
+descargas/
+huevos/
+.huevos/
+biblioteca/
+lib64/
+regiones/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.huevo
+#Registros del instalador
+pip-log.txt
+pip-eliminar-este-directorio.txt
+#Informes de pruebas unitarias/cobertura
+htmlcov/
+.tox/
+.cobertura
+.cobertura.*
+.cache
+pruebas de nariz.xml
+cobertura.xml
+*,cubrir
+#PyBuilder
+objetivo/
+#Puntos de control del cuaderno
+.ipynb_checkpoints/
