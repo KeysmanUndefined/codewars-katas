@@ -1,6 +1,86 @@
+# =========================
+# Java
+# =========================
 *.class
 *.tasty
 *.log
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editores
+# =========================
+.vscode/
+
+# =========================
+# Python: archivos compilados
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Python: extensiones de C
+# =========================
+*.so
+
+# =========================
+# Entornos virtuales
+# =========================
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# Distribución y paquetes
+# =========================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# Registros de instalación
+# =========================
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =========================
+# Pruebas y cobertura
+# =========================
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# =========================
+# PyBuilder
+# =========================
+target/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
