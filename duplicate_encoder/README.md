@@ -1,57 +1,72 @@
-# Permute a Palindrome
 
-Ejercicio de Python basado en el kata **Permute a Palindrome** de Codewars.
+# Duplicate Encoder
+
+Ejercicio de Python basado en el kata [Duplicate Encoder](https://www.codewars.com/kata/54b42f9314d9229fd6000d9c) de Codewars (6 kyu).
 
 ## Enunciado
 
-Crear una función que determine si los caracteres de una cadena pueden reorganizarse para formar un **palíndromo**.
+Crear una función que transforme una cadena de texto:
 
-Un palíndromo se lee igual de izquierda a derecha que de derecha a izquierda.
+- `(` si el carácter aparece una sola vez.
+- `)` si el carácter aparece más de una vez.
+
+La comparación no distingue entre mayúsculas y minúsculas.
+
+## Ejemplos
 
 | Entrada | Resultado |
 |---|---|
-| `"madam"` | `True` |
-| `"adamm"` | `True` |
-| `"junk"` | `False` |
-| `""` | `True` |
+| `"din"` | `"((("` |
+| `"recede"` | `"()()()"` |
+| `"Success"` | `")())())"` |
+| `"(( @"` | `"))(("` |
 
 ## Mi solución
 
 ```python
-def permute_a_palindrome(input):
-    impares = 0
-    input = input.replace(" ", "")
+def duplicate_encode(word):
+    code = ""
+    word = word.lower()
 
-    for letra in set(input):
-        contador = input.count(letra)
+    for letra in word:
+        if word.count(letra) > 1:
+            code = code + ")"
+        else:
+            code = code + "("
 
-        if contador % 2 != 0:
-            impares += 1
-
-    return impares <= 1
+    return code
 ```
 
 ## Cómo funciona
 
-La clave es que **una cadena puede reorganizarse como palíndromo si, como máximo, un carácter aparece un número impar de veces**.
+1. Inicializamos una cadena vacía para guardar el resultado.
+2. Convertimos el texto a minúsculas con `.lower()`.
+3. Recorremos cada carácter mediante un bucle `for`.
+4. Utilizamos `.count()` para comprobar cuántas veces aparece.
+5. Añadimos `(` o `)` según corresponda.
+6. Devolvemos la cadena resultante con `return`.
 
-La función recorre los caracteres distintos mediante `set()`, cuenta sus apariciones con `.count()` y utiliza el operador módulo `%` para identificar las frecuencias impares. Finalmente, devuelve un booleano según el número de caracteres con frecuencia impar.
+## Pruebas automatizadas
 
-**Nota:** esta implementación elimina los espacios antes de comprobar la cadena. Si los espacios deben contar como caracteres en el kata, habría que retirar `replace(" ", "")`.
+El proyecto incluye cuatro pruebas con `pytest`, todas superadas.
 
-## Explicación paso a paso
+Para ejecutarlas desde la carpeta `Duplicate_Encoder`:
 
-El cuaderno Jupyter (`.ipynb`) contiene el desarrollo completo del ejercicio y explicaciones de los conceptos empleados, entre ellos:
+```powershell
+python -m pytest -v
+```
 
-- Cadenas de texto y valores booleanos.
-- Funciones, bucles `for` y condiciones `if`.
-- `set()`, `.count()` y `.replace()`.
-- Operador módulo `%` y comparaciones.
-- Precedencia de operadores.
-- `return` e indentación.
+Consulta [TESTING.md](TESTING.md) para ver las pruebas, los resultados y las capturas de pantalla.
 
-**[Consultar el notebook con la explicación completa](./Palindromo.ipynb)**
+## Archivos del proyecto
+
+- `duplicate_encoder.ipynb`: explicación detallada en Jupyter.
+- `src/duplicate_encoder.py`: implementación de la función.
+- `test/test_duplicate_encoder.py`: pruebas automatizadas.
+- `pytest.ini`: configuración de pytest.
+- `TESTING.md`: documentación de las pruebas.
+- `images/`: capturas de pantalla.
 
 ## Autor
 
-[KeysmanUndefined](https://github.com/KeysmanUndefined) · [Repositorio de Codewars Katas](https://github.com/KeysmanUndefined/codewars-katas)
+[KeysmanUndefined](https://github.com/KeysmanUndefined) · [Repositorio Codewars Katas](https://github.com/KeysmanUndefined/codewars-katas)
