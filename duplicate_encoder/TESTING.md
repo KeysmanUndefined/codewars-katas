@@ -8,22 +8,22 @@ Comprobar el funcionamiento de la función `duplicate_encode()` mediante pruebas
 
 ```text
 Duplicate_Encoder/
+├── images/
+│   ├── Captura de pantalla 2026-10-17 205052.png
+│   ├── Captura de pantalla 2026-10-17 205222.png
+│   ├── Captura de pantalla 2026-10-17 205321.png
+│   ├── Captura de pantalla 2026-10-17 205443.png
+│   └── Captura de pantalla 2026-10-17 205604.png
 ├── src/
 │   ├── __init__.py
 │   └── duplicate_encoder.py
 ├── test/
 │   ├── __init__.py
 │   └── test_duplicate_encoder.py
-├── img/
-│   ├── 01_primer_test.png
-│   ├── 02_dos_tests.png
-│   ├── 03_tres_tests.png
-│   ├── 04_test_fallido.png
-│   └── 05_tests_superados.png
+├── duplicate_encoder.ipynb
 ├── pytest.ini
 ├── README.md
-├── TESTING.md
-└── Duplicate_Encoder.ipynb
+└── TESTING.md
 ```
 
 ## Preparación e instalación
