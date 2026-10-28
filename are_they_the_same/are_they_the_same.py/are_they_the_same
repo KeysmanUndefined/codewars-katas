@@ -1,0 +1,18 @@
+def comp(a,b):
+    if (a == None) or (b == None):
+        return False
+
+    resultado = []
+    for i in a:
+        resultado.append(i*i)
+    
+    return sorted(resultado) == sorted(b)
+
+
+if __name__ == "__main__":
+    a = [121, 144, 19, 161, 19, 144, 19, 11]
+    b = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]
+
+    assert comp(a, b) == True
+    
+
