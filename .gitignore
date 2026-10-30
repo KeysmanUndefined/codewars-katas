@@ -80,7 +80,8 @@ coverage.xml
 # =========================
 target/
 
-# =========================
 # Jupyter Notebook
-# =========================
 .ipynb_checkpoints/
+
+# Repositorio independiente
+/apuntes/string-fundamentals-in-python/

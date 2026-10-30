@@ -1,4 +1,4 @@
-from src.duplicate_encoder import duplicate_encode
+from ejercicios_codewars.duplicate_encoder.src.duplicate_encoder import duplicate_encode
 
 
 def test_din():

@@ -1,4 +1,4 @@
-from src.digits import digits
+from ejercicios_codewars.cada_suma_posible_dos_digitos.src.digits import digits
 
 def test_dos_digitos():
     assert digits(12) == [3]
